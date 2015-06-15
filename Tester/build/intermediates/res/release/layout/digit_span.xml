@@ -1,0 +1,388 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:paddingBottom="@dimen/activity_vertical_margin"
+	android:paddingLeft="@dimen/activity_horizontal_margin"
+	android:paddingRight="@dimen/activity_horizontal_margin"
+	android:paddingTop="@dimen/activity_vertical_margin"
+	tools:context=".MainActivity" >
+
+
+	<ScrollView
+		android:layout_width="fill_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:gravity="center_horizontal">
+
+		<LinearLayout
+			android:orientation="vertical" android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:gravity="center_horizontal">
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fadingEdge="horizontal|vertical"
+                android:scrollbars="horizontal|vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TableLayout
+                        android:id="@+id/tableLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="3" >
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center_horizontal">
+                                <TextView
+                                    android:id="@+id/description"
+                                    android:text="Digit Span (Forward) (WAIS)"
+                                    android:layout_width="330dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="10dip"
+                                    android:textSize="20sp"
+                                    android:gravity="center_horizontal" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#AFAFAF"
+                                    android:orientation="horizontal" >
+                                    <TextView
+                                        android:id="@+id/des1"
+                                        android:layout_width="300dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="10dip"
+                                        android:text="\nCheck here if test NOT completed\n(record reason in Factors Affecting Testing section)"
+                                        android:textSize="12sp"
+                                        android:gravity="right" />
+                                    <CheckBox
+                                        android:id="@+id/checkBox1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" " />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </TableRow>
+
+						<TableRow android:id = "@+id/row1"
+							android:layout_marginTop="20dp"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content">
+							<LinearLayout
+								android:layout_width="610dp"
+								android:layout_height="wrap_content"
+								android:background="#b5cbe5"
+								android:orientation="horizontal"
+								android:layout_marginBottom="10dp">
+								<TextView
+									android:text="Score:\n0 = incorrect\n1 = incorrect, sequencing error only\n2 = correct\n8 = not administered\n"
+									android:width="300dp"
+									android:gravity="left"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:textSize="10sp" />
+								<TextView
+									android:text="Span Lengths:\n•	Circle the longest correct span length\n•	Underline the longest span scored “1” or “2” AFTER the official discontinue."
+									android:gravity="left"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:textSize="10sp">
+								</TextView>
+							</LinearLayout>
+						</TableRow>
+
+                        <TableRow
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id = "@+id/guideWord"
+                                android:text="“I am going to say some numbers.  Listen carefully, and when I am through say them right after me.”\n"
+                                android:gravity="left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </TableRow>
+
+						<TableRow>
+							<LinearLayout
+							  android:layout_width="wrap_content"
+							  android:layout_height="match_parent"
+							  android:orientation="horizontal" >
+							<thu.voicetest.DigitAllView
+							android:id="@+id/digit_1"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							image=""
+							/>
+							<TextView
+								android:id="@+id/digit_1view"
+								android:text="\nCORRECT:\nHere are some others.\n(START AT 3 span SERIES).\n\nINCORRECT: No, that one is 9-1-7.\nI said 7-1-9, so you should say 9-1-7.\nTry this one, and remember you are to\n say them backwards: 3-4-8."
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								/>
+							</LinearLayout>
+						</TableRow>
+
+						<TableRow>
+							<LinearLayout
+							  android:layout_width="wrap_content"
+							  android:layout_height="match_parent"
+							  android:orientation="horizontal" >
+							<thu.voicetest.DigitAllView
+							android:id="@+id/digit_2"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							image=""
+							/>
+							<TextView
+								android:id="@+id/digit_2view"
+								android:text="\nCORRECT:\nHere are some others.\n(START AT 3 span SERIES).\n\nINCORRECT: Here are some others.\n(START AT 2 span SERIES)."
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								/>
+							</LinearLayout>
+						</TableRow>
+						<TableRow>
+							<LinearLayout
+							  android:layout_width="wrap_content"
+							  android:layout_height="match_parent"
+							  android:orientation="horizontal" >
+							<thu.voicetest.DigitAllView
+							android:id="@+id/digit1"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							image=""
+							/>
+							<thu.voicetest.DigitAllView
+							android:id="@+id/digit2"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							image=""
+							/>
+							</LinearLayout>
+						</TableRow>
+						<TableRow>
+							<LinearLayout
+							  android:layout_width="wrap_content"
+							  android:layout_height="match_parent"
+							  android:orientation="horizontal" >
+							<thu.voicetest.DigitAllView
+							android:id="@+id/digit3"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							image=""
+							/>
+							<thu.voicetest.DigitAllView
+							android:id="@+id/digit4"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							image=""
+							/>
+							</LinearLayout>
+						</TableRow>
+						<TableRow>
+							<LinearLayout
+							  android:layout_width="wrap_content"
+							  android:layout_height="match_parent"
+							  android:orientation="horizontal" >
+							<thu.voicetest.DigitAllView
+							android:id="@+id/digit5"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							image=""
+							/>
+							<thu.voicetest.DigitAllView
+							android:id="@+id/digit6"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							image=""
+							/>
+							</LinearLayout>
+						</TableRow>
+						<TableRow>
+							<LinearLayout
+							  android:layout_width="wrap_content"
+							  android:layout_height="match_parent"
+							  android:orientation="horizontal" >
+							<thu.voicetest.DigitAllView
+							android:id="@+id/digit7"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							image=""
+							/>
+							<thu.voicetest.DigitAllView
+							android:id="@+id/digit8"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							image=""
+							/>
+							</LinearLayout>
+						</TableRow>
+						<TableRow>
+							<LinearLayout
+							  android:layout_width="wrap_content"
+							  android:layout_height="match_parent"
+							  android:orientation="horizontal" >
+							<thu.voicetest.DigitAllView
+							android:id="@+id/digit9"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							image=""
+							/>
+							<thu.voicetest.DigitAllView
+							android:id="@+id/digit10"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							image=""
+							/>
+							</LinearLayout>
+						</TableRow>
+						<TableRow>
+							<LinearLayout
+							  android:layout_width="wrap_content"
+							  android:layout_height="match_parent"
+							  android:orientation="horizontal" >
+							<thu.voicetest.DigitAllView
+							android:id="@+id/digit11"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							image=""
+							/>
+							<thu.voicetest.DigitAllView
+							android:id="@+id/digit12"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							image=""
+							/>
+							</LinearLayout>
+						</TableRow>
+						<TableRow>
+							<LinearLayout
+							  android:layout_width="wrap_content"
+							  android:layout_height="match_parent"
+							  android:orientation="horizontal" >
+							<thu.voicetest.DigitAllView
+							android:id="@+id/digit13"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							image=""
+							/>
+							<thu.voicetest.DigitAllView
+							android:id="@+id/digit14"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							image=""
+							/>
+							</LinearLayout>
+						</TableRow>
+						<TableRow>
+							<LinearLayout
+							    android:layout_width="wrap_content"
+							    android:layout_height="match_parent"
+                                android:background="#AFAFAF"
+							    android:orientation="horizontal" >
+							    <TextView
+								    android:id="@+id/trailScore"
+								    android:layout_width="wrap_content"
+								    android:layout_height="wrap_content"
+								    android:layout_marginTop="10dip"
+								    android:background="#AFAFAF"
+								    android:text="SCORE:" />
+							    <TextView
+								    android:id="@+id/score1"
+								    android:layout_width="wrap_content"
+								    android:layout_height="wrap_content"
+								    android:layout_marginTop="10dip"
+								    android:text="The longest correct span =     " />
+							    <TextView
+								    android:id="@+id/score2"
+								    android:layout_width="wrap_content"
+								    android:layout_height="wrap_content"
+								    android:layout_marginTop="10dip"
+								    android:text="The longest span =     " />
+                            </LinearLayout>
+                        </TableRow>
+
+
+                        <TableRow android:id = "@+id/row2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_width="610dp"
+                                android:layout_height="wrap_content"
+                                android:background="#b5cbe5"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="10dp">
+                                <TextView
+                                    android:text="\nIs qualitative score valid?"
+                                    android:width="200dp"
+                                    android:gravity="left"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="10sp" />
+
+                                <RadioGroup
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="10sp"
+                                        android:width="250dp"
+                                        android:text="No" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="10sp"
+                                        android:text="Yes" />
+                                </RadioGroup>
+                            </LinearLayout>
+                        </TableRow>
+                        <TableRow>
+                            <Button
+                                android:id = "@+id/getScore"
+                                android:layout_width="300dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="Score"
+                                />
+                        </TableRow>
+
+						<TableRow android:background="#AFAFAF"
+							android:layout_marginBottom="50dp">
+							<TextView
+								android:id="@+id/down"
+								android:layout_width="650dp"
+								android:layout_height="wrap_content"
+								android:layout_gravity="right"
+								android:background="#AFAFAF"
+								android:text="NP007" />
+						</TableRow>
+
+						<TableRow>
+							<Button
+								android:id = "@+id/getNext"
+								android:layout_width="300dp"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center_horizontal"
+								android:text="Next" />
+						</TableRow>
+			  		</TableLayout>
+				</LinearLayout>
+			</HorizontalScrollView>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout><!-- From: file:/Users/zrfan/Documents/tester/Tester/res/layout/digit_span.xml -->

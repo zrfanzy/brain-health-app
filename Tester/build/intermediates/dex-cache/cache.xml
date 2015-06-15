@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/zrfan/Documents/tester/Tester/libs/oss-android-sdk-1.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="47477b7040090b00d7181bb37a54cd4a400ffb4f">
+        <dex dex="/Users/zrfan/Documents/tester/Tester/build/intermediates/pre-dexed/debug/oss-android-sdk-1.0.0-7bb082eb8c2f2d44bc8dcb1c5b2aea7f998cdc2f.jar" />
+    </item>
+    <item
+        jar="/Users/zrfan/Documents/tester/Tester/libs/android-support-v4.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="db0f122c99ef9f90dbab3fada6d191f2880cbb8e">
+        <dex dex="/Users/zrfan/Documents/tester/Tester/build/intermediates/pre-dexed/debug/android-support-v4-e8c8581f61cbd3231c0671598e8d29da6424ba48.jar" />
+    </item>
+    <item
+        jar="/Users/zrfan/Documents/tester/Tester/libs/VoiceRecognition.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="99844d9e4943e9f0d59e94423ec9c2cef5d36db8">
+        <dex dex="/Users/zrfan/Documents/tester/Tester/build/intermediates/pre-dexed/debug/VoiceRecognition-bcdaec83b44c8ff2ead2e3afcee0fed39992f756.jar" />
+    </item>
+    <item
+        jar="/Users/zrfan/Documents/tester/Tester/libs/aliyun-sdk-oss-2.0.4.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e4c2efa316b594a2d9ff7e80c08cb3c094fd2a9b">
+        <dex dex="/Users/zrfan/Documents/tester/Tester/build/intermediates/pre-dexed/debug/aliyun-sdk-oss-2.0.4-ae7d84aba29dbc0d1c82e98651da1843f81c064c.jar" />
+    </item>
+
+</items>

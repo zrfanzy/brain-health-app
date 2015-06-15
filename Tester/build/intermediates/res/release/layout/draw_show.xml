@@ -1,0 +1,192 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="fill_parent"
+        android:layout_height="fill_parent" android:gravity="center_horizontal">
+ 
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fadingEdge="horizontal|vertical"
+            android:scrollbars="horizontal|vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TableLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="3" >
+                    <TableRow
+                        android:id = "@+id/row1">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center_horizontal">
+                            <TextView
+                                android:id="@+id/description"
+                                android:text="VISUAL REPRODUCTION (WMS),\n Immediate"
+                                android:layout_width="330dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dip"
+                                android:textSize="20sp"
+                                android:gravity="center_horizontal" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#AFAFAF"
+                                android:orientation="horizontal" >
+                                <TextView
+                                    android:id="@+id/des1"
+                                    android:layout_width="300dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="10dip"
+                                    android:text="\nCheck here if test NOT completed\n(record reason in Factors Affecting Testing section)"
+                                    android:textSize="12sp"
+                                    android:gravity="right" />
+                                <CheckBox
+                                    android:id="@+id/checkBox1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" " />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="50dp" android:id = "@+id/row2">
+                        <TextView
+                            android:id="@+id/progresstxt"
+                            android:layout_width="650dp"
+                            android:textSize="20sp"
+                            android:layout_height="wrap_content"
+                            android:text="“I am going to show you a drawing.  You will have just 10 seconds to look at it. Then I will take it away and let you draw it from memory.  Don’t begin to draw until I say go.  Ready?”" />
+                    </TableRow>
+
+                    <TableRow android:id = "@+id/row3">
+                        <Button
+                            android:id = "@+id/tryaginbtn"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="    Start    " />
+                    </TableRow>
+
+                    <TableRow>
+                        <thu.drawingtest.LoaderImageView
+                            android:id="@+id/loaderImageViewA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            image=""
+                            android:layout_gravity="center_horizontal" />
+                    </TableRow>
+
+                    <TableRow android:id = "@+id/row4">
+                        <TextView
+                            android:id = "@+id/countdownHint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:text="Now draw it here.\n \n You will draw the next one here." />
+                    </TableRow>
+
+                    <TableRow android:id = "@+id/row5">
+
+                        <Button
+                            android:id = "@+id/tryaginbtnB"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="    Start    " />
+                    </TableRow>
+
+                    <TableRow>
+                        <thu.drawingtest.LoaderImageView
+                            android:id="@+id/loaderImageViewB"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            image=""
+                            android:layout_gravity="center_horizontal" />
+                    </TableRow>
+
+                    <TableRow android:id = "@+id/row6">
+
+                        <TextView
+                            android:id="@+id/progresstxtB"
+                            android:layout_width="650dp"
+                            android:textSize="20sp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Now draw it here \n \n Here is one that is a little harder.  This next one has 2 drawings on it.  I want you to look at both of them carefully—again you have only 10 seconds to look at them and then I will take it away and let you make both drawings;  the one on the left side---here (point to space) and the right one---here (point).  Ready? " />
+                    </TableRow>
+
+                    <TableRow android:id = "@+id/row7">
+                        <Button
+                            android:id = "@+id/tryaginbtnC"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="    Start    " />
+                    </TableRow>
+
+                    <TableRow>
+                        <thu.drawingtest.LoaderImageView
+                            android:id="@+id/loaderImageViewC"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            image=""
+                            android:layout_gravity="center_horizontal" />
+                    </TableRow>
+
+                    <TableRow android:id = "@+id/row8">
+                        <TextView
+                            android:id="@+id/progresstxtC"
+                            android:layout_width="650dp"
+                            android:textSize="20sp"
+                            android:layout_height="wrap_content"
+                            android:text="Now draw it here." />
+                    </TableRow>
+
+                    <TableRow android:id = "@+id/row9" android:background="#AFAFAF"
+                        android:layout_marginBottom="50dp">
+                        <TextView
+                            android:id="@+id/down"
+                            android:layout_width="650dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:background="#AFAFAF"
+                            android:text="NP005-A" />
+                    </TableRow>
+
+                    <TableRow android:id = "@+id/row10" >
+                        <Button
+                            android:id = "@+id/showImgNext"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:text="     Next     "
+                            android:layout_marginTop="50dp" />
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+</LinearLayout>
+<!-- From: file:/Users/zrfan/Documents/tester/Tester/res/layout/draw_show.xml -->
