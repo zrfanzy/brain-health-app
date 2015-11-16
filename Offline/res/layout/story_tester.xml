@@ -1,0 +1,569 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    xmlns:tools="http://schemas.android.com/tools"  
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"  
+    android:orientation="vertical"  
+    android:paddingBottom="@dimen/activity_vertical_margin"  
+    android:paddingLeft="@dimen/activity_horizontal_margin"  
+    android:paddingRight="@dimen/activity_horizontal_margin"  
+    android:paddingTop="@dimen/activity_vertical_margin"  
+    tools:context=".MainActivity" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+    
+    <LinearLayout 
+    	android:orientation="vertical" android:layout_width="fill_parent" 
+    	android:layout_height="fill_parent" android:gravity="bottom|center_horizontal">
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fadingEdge="horizontal|vertical"
+            android:scrollbars="horizontal|vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+                <TableLayout 
+                    android:id="@+id/tableLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="3"
+                    android:layout_gravity="center_horizontal">
+                    <TableRow android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/description"
+                                android:text="Logical Memory(WMS)\n Immediate Recall"
+                                android:layout_width="330dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dip"
+                                android:textSize="20sp"
+                                android:gravity="center_horizontal" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#AFAFAF"
+                                android:orientation="horizontal" >
+                                <TextView
+                                    android:id="@+id/des1"
+                                    android:layout_width="300dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="10dip"
+                                    android:text="\nCheck here if test NOT completed\n(record reason in Factors Affecting Testing section)"
+                                    android:textSize="12sp"
+                                    android:gravity="right" />
+
+                                <CheckBox
+                                    android:id="@+id/checkBox1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" " />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="610dp"
+                            android:layout_height="wrap_content"
+                            android:background="#b5cbe5"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="10dp">
+                            <TextView
+                                android:text="Circle “2” for verbatim (V) credit and “1” for paraphrase (P) credit (see Scoring Manual)"
+                                android:gravity="left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow>
+
+                        <Button
+                            android:id = "@+id/btnPlay"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="    Play    "
+                            android:layout_marginTop="50dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#000000">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:text="Story"
+                                android:gravity="center"
+                                android:width="150dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#FFFFFF"
+                                android:textSize="20sp"
+                                android:layout_margin="1dp"/>
+                            <TextView
+                                android:text="V"
+                                android:gravity="center"
+                                android:width="30dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#FFFFFF"
+                                android:textSize="20sp"
+                                android:layout_margin="1dp"/>
+                            <TextView
+                                android:text="Paraphrase"
+                                android:gravity="center"
+                                android:width="165dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#FFFFFF"
+                                android:textSize="20sp"
+                                android:layout_margin="1dp"/>
+                            <TextView
+                                android:text="B"
+                                android:gravity="center"
+                                android:width="30dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#FFFFFF"
+                                android:textSize="20sp"
+                                android:layout_margin="1dp"/>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:text="# PSV (freq)"
+                                    android:gravity="center"
+                                    android:width="62dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="#FFFFFF"
+                                    android:textSize="12sp"
+                                    android:layout_margin="1dp"/>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:text="before\nquery"
+                                        android:gravity="center"
+                                        android:width="30dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="#FFFFFF"
+                                        android:textSize="10sp"
+                                        android:layout_margin="1dp"/>
+                                    <TextView
+                                        android:text="after\nquery"
+                                        android:gravity="center"
+                                        android:width="30dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="#FFFFFF"
+                                        android:textSize="10sp"
+                                        android:layout_margin="1dp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <TextView
+                                android:text="Record Story Verbatim"
+                                android:gravity="center"
+                                android:width="220dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#FFFFFF"
+                                android:textSize="10sp"
+                                android:layout_margin="1dp"/>
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow>
+                        <LinearLayout>
+                            <LinearLayout
+                                android:layout_width="450dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <thu.questions.StoryScoreView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"></thu.questions.StoryScoreView>
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/voicetxt"
+                                android:layout_width="220dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#000000">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:text="Score:"
+                                android:gravity="center"
+                                android:width="130dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#AFAFAF"
+                                android:textSize="20sp"
+                                android:layout_margin="1dp"/>
+                            <TextView android:id="@+id/storyScore1"
+                                android:text=""
+                                android:gravity="center"
+                                android:width="50dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#FFFFFF"
+                                android:textSize="20sp"
+                                android:layout_margin="1dp"/>
+                            <TextView android:id="@+id/storyScore2"
+                                android:text=""
+                                android:gravity="center"
+                                android:width="196dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#FFFFFF"
+                                android:textSize="20sp"
+                                android:layout_margin="1dp"/>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:text="Total (pre- and post-Query) Number of:"
+                                    android:gravity="center"
+                                    android:width="285dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="#FFFFFF"
+                                    android:textSize="12sp"
+                                    android:layout_margin="1dp"/>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:text=""
+                                        android:gravity="center"
+                                        android:width="94dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="#FFFFFF"
+                                        android:textSize="10sp"
+                                        android:layout_margin="1dp"/>
+                                    <TextView
+                                        android:text="Confabulations"
+                                        android:gravity="center"
+                                        android:width="94dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="#FFFFFF"
+                                        android:textSize="10sp"
+                                        android:layout_margin="1dp"/>
+                                    <TextView
+                                        android:text="Intrusions"
+                                        android:gravity="center"
+                                        android:width="94dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="#FFFFFF"
+                                        android:textSize="10sp"
+                                        android:layout_margin="1dp"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:text="Related to story details"
+                                        android:gravity="center"
+                                        android:width="94dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFFFFF"
+                                        android:textSize="10sp"
+                                        android:layout_margin="1dp"/>
+                                    <EditText
+                                        android:text=""
+                                        android:gravity="left"
+                                        android:width="94dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFFFFF"
+                                        android:textSize="10sp"
+                                        android:layout_margin="1dp"/>
+                                    <EditText
+                                        android:text=""
+                                        android:gravity="left"
+                                        android:width="94dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFFFFF"
+                                        android:textSize="10sp"
+                                        android:layout_margin="1dp"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:text="Unrelated to story details"
+                                        android:gravity="center"
+                                        android:width="94dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFFFFF"
+                                        android:textSize="10sp"
+                                        android:layout_margin="1dp"/>
+                                    <EditText
+                                        android:text=""
+                                        android:gravity="left"
+                                        android:width="94dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFFFFF"
+                                        android:textSize="10sp"
+                                        android:layout_margin="1dp"/>
+                                    <EditText
+                                        android:text=""
+                                        android:gravity="left"
+                                        android:width="94dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFFFFF"
+                                        android:textSize="10sp"
+                                        android:layout_margin="1dp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#000000">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:text="Other Perseveration:  "
+                                android:gravity="right"
+                                android:width="380dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#FFFFFF"
+                                android:textSize="12sp"
+                                android:layout_margin="1dp"/>
+                            <TextView
+                                android:text="Post-Query Response Only:"
+                                android:gravity="left"
+                                android:width="285dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:textSize="12sp"
+                                android:layout_margin="1dp"/>
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#000000">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:text="Clinical Judgment of Perseverations (circle)  "
+                                android:gravity="right"
+                                android:width="380dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#AFAFAF"
+                                android:textSize="12sp"
+                                android:layout_margin="1dp"/>
+                            <TextView
+                                android:text="1 = no; 2 = yes, gave response:"
+                                android:gravity="left"
+                                android:width="160dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#FFFFFF"
+                                android:textSize="10sp"
+                                android:layout_margin="1dp"/>
+                            <EditText
+                                android:text=""
+                                android:width="125dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:gravity="left"
+                                android:textSize="10sp"
+                                android:background="#FFFFFF"
+                                android:layout_margin="1dp"/>
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow android:background="#000000">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button  android:id = "@+id/bt1"
+                                android:text="0\nNo"
+                                android:gravity="center"
+                                android:width="94dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#AFAFAF"
+                                android:textSize="12sp"
+                                android:layout_margin="1dp"/>
+                            <Button  android:id = "@+id/bt2"
+                                android:text="1\nYes"
+                                android:gravity="center"
+                                android:width="94dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#AFAFAF"
+                                android:textSize="12sp"
+                                android:layout_margin="1dp"/>
+                            <Button  android:id = "@+id/bt3"
+                                android:text="8\nN/A"
+                                android:gravity="center"
+                                android:width="94dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#AFAFAF"
+                                android:textSize="12sp"
+                                android:layout_margin="1dp"/>
+                            <Button  android:id = "@+id/bt4"
+                                android:text="9\nUnknown"
+                                android:gravity="center"
+                                android:width="94dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#AFAFAF"
+                                android:textSize="12sp"
+                                android:layout_margin="1dp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:text="New correct details (freq)"
+                                    android:gravity="left"
+                                    android:width="160dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFF"
+                                    android:textSize="10sp"
+                                    android:layout_margin="1dp"/>
+                                <EditText
+                                    android:text=""
+                                    android:width="125dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:gravity="left"
+                                    android:textSize="10sp"
+                                    android:background="#FFFFFF"
+                                    android:layout_margin="1dp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:text="New incorrect details (freq)"
+                                    android:gravity="left"
+                                    android:width="160dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFF"
+                                    android:textSize="10sp"
+                                    android:layout_margin="1dp"/>
+                                <EditText
+                                    android:text=""
+                                    android:width="125dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:gravity="left"
+                                    android:textSize="10sp"
+                                    android:background="#FFFFFF"
+                                    android:layout_margin="1dp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow android:background="#AFAFAF"
+                        android:layout_marginBottom="50dp">
+                        <TextView
+                            android:id="@+id/down"
+                            android:layout_width="650dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:background="#AFAFAF"
+                            android:text="NP004" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="50dp">
+
+                        <Button
+                            android:id = "@+id/btnStoryNext"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="    Next    "
+                            android:layout_marginTop="50dp" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+  
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

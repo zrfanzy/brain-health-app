@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/zrfan/Documents/participanter/participater/libs/oss-android-sdk-1.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="47477b7040090b00d7181bb37a54cd4a400ffb4f">
+        <dex dex="/Users/zrfan/Documents/participanter/participater/build/intermediates/pre-dexed/debug/oss-android-sdk-1.0.0-f4b94d734e08502daa3302ebc7ef491609e44aea.jar" />
+    </item>
+    <item
+        jar="/Users/zrfan/Documents/participanter/participater/libs/android-support-v4.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="db0f122c99ef9f90dbab3fada6d191f2880cbb8e">
+        <dex dex="/Users/zrfan/Documents/participanter/participater/build/intermediates/pre-dexed/debug/android-support-v4-8dbb69570b1c746881ee3b44c40e8462f6de507b.jar" />
+    </item>
+
+</items>

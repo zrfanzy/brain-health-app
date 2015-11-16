@@ -1,0 +1,122 @@
+{
+  "question_items": [
+  {
+    "type": "draw",
+    "guide_words": "VR_IR(WMS)",
+    "show": 1
+  },
+    {
+      "type": "draw",
+      "guide_words": "VR_DR(WMS)"
+    },
+  {
+    "type": "fill_in_set",
+    "questions": [
+    {
+      "type": "choice",
+      "question": "VR_Recognition(WMS)",
+      "choices": [
+      {
+        "choice": "t1_1",
+        "score": 1
+      },
+      {
+        "choice": "t1_2",
+        "score":2
+      },
+      {
+        "choice": "t1_3",
+        "score": 3
+      },
+      {
+        "choice": "t1_4",
+        "score": 4
+      },
+      {
+        "choice": "t1_5",
+        "score": 5
+      }
+      ]
+    },
+    {
+      "type": "choice",
+      "question": "VR_Recognition(WMS)",
+      "choices": [
+      {
+        "choice": "t2_1",
+        "score": 1
+      },
+      {
+        "choice": "t2_2",
+        "score":2
+      },
+      {
+        "choice": "t2_3",
+        "score": 3
+      },
+      {
+        "choice": "t2_4",
+        "score": 4
+      },
+      {
+        "choice": "t2_5",
+        "score": 5
+      }
+      ]
+    },
+    {
+      "type": "choice",
+      "question": "VR_Recognition(WMS)",
+      "choices": [
+      {
+        "choice": "t3_1",
+        "score": 1
+      },
+      {
+        "choice": "t3_2",
+        "score":2
+      },
+      {
+        "choice": "t3_3",
+        "score": 3
+      },
+      {
+        "choice": "t3_4",
+        "score": 4
+      },
+      {
+        "choice": "t3_5",
+        "score": 5
+      }
+      ]
+    },
+    {
+      "type": "choice",
+      "question": "VR_Recognition(WMS)",
+      "choices": [
+      {
+        "choice": "t4_1",
+        "score": 1
+      },
+      {
+        "choice": "t4_2",
+        "score":2
+      },
+      {
+        "choice": "t4_3",
+        "score": 3
+      },
+      {
+        "choice": "t4_4",
+        "score": 4
+      },
+      {
+        "choice": "t4_5",
+        "score": 5
+      }
+      ]
+    }
+    ]
+  }
+  ]
+}
