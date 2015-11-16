@@ -1,0 +1,68 @@
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+\secretlevel{绝密} \secretyear{2100}
+
+\ctitle{脑健康测试系统研究}
+\makeatletter
+\ifthu@bachelor\relax\else
+  \ifthu@doctor
+    \cdegree{工学博士}
+  \else
+    \ifthu@master
+      \cdegree{工学硕士}
+    \fi
+  \fi
+\fi
+\makeatother
+
+
+\cdepartment[计算机]{计算机科学与技术系}
+\cmajor{计算机科学与技术}
+\cauthor{周若凡} 
+\csupervisor{陶霖密教授}
+% 日期自动生成，如果你要自己写就改这个cdate
+%\cdate{\CJKdigits{\the\year}年\CJKnumber{\the\month}月}
+
+\etitle{An Introduction to \LaTeX{} Thesis Template of Tsinghua University} 
+% 这块比较复杂，需要分情况讨论：
+% 1. 学术型硕士
+%    \edegree：必须为Master of Arts或Master of Science（注意大小写）
+%              “哲学、文学、历史学、法学、教育学、艺术学门类，公共管理学科
+%               填写Master of Arts，其它填写Master of Science”
+%    \emajor：“获得一级学科授权的学科填写一级学科名称，其它填写二级学科名称”
+% 2. 专业型硕士
+%    \edegree：“填写专业学位英文名称全称”
+%    \emajor：“工程硕士填写工程领域，其它专业学位不填写此项”
+% 3. 学术型博士
+%    \edegree：Doctor of Philosophy（注意大小写）
+%    \emajor：“获得一级学科授权的学科填写一级学科名称，其它填写二级学科名称”
+% 4. 专业型博士
+%    \edegree：“填写专业学位英文名称全称”
+%    \emajor：不填写此项
+\edegree{Doctor of Engineering} 
+\emajor{Computer Science and Technology} 
+\eauthor{Xue Ruini} 
+\esupervisor{Professor Zheng Weimin} 
+\eassosupervisor{Chen Wenguang} 
+% 这个日期也会自动生成，你要改么？
+% \edate{December, 2005}
+
+% 定义中英文摘要和关键字
+\begin{cabstract}
+随着移动互联网不断的改朝换代，移动健康已经成为了医药产业信息化的一个重要的、必不可少的分支。认知功能障碍是痴呆的早期症状，如果得到及时的诊断并在临床上进行干预则可以很大程度上延缓病情的发展。传统的诊断基于纸质长问卷，费时费力。故依靠移动健康来辅助诊断认知功能障碍对于临床医学上具有非常重要的意义。
+
+本文旨在基于安卓系统在移动平板上设计并开发一套能够辅助诊断认知功能障碍的医患交互系统，整个系统分成三个部分，包括在线病人版、在线医生版、离线打分版，目的在智能终端设备上能完全还原传统纸板的长问卷一样的体验，并将功能分开更易开发和使用；并实现多种题型如选择题、单词配对题、故事复述题等的界面，完成基于不同题目类型的数据记录、录音、笔迹记录等等；同时针对题目和系统对数据进行统一的设计，使测试得到的数据能比较好的整理，并且保证了系统的复用性和扩展性。
+\end{cabstract}
+
+\ckeywords{安卓,移动应用,人机交互,移动健康,脑健康}
+
+\begin{eabstract} 
+As the rapid development of mobile web, Mhealth has become an important and indispensable branch of informatization of medical industry. Cognitive dysfunction is the ealrly symptom of senile dementia, if cognitive dysfunction is diagnosed promptly, clinical intervention can largely postpone the development of the illness. While traditional diagnosis is based on long paper questionnaire which cost doctors' large time and energy. So it is with great significance using Mhealth to assist doctor to diagnose cognitive dysfunction.
+
+This paper aims at design and develop a doctor-patient interaction system on panel computer to help docutor to diagnose cognitive dysfunction based on android. The whole system consists of three parts: patient-online version, doctor-online version and offline version, and it can totally restore the traditional long paper questionnaire on the mobile terminal devices and as well as being more easily for developing and using. And various types of questions is implemented such as choice question, learning trails question, story recall question and so on. Functions like data recording, audio recording, drawing recording is also implemented. The data system is also designed with the whole system so that the data could be well organized in the database, enable the system to have expansibility and reusability.
+\end{eabstract}
+
+\ekeywords{android, mobile application, human-computer iteraction, mHealth, brain-health}

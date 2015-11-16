@@ -1,0 +1,84 @@
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
+
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+
+\chapter{语音识别实验}
+
+为了在目前市场中选择合适的语音识别接口作为支持本系统中语音识别的功能，以及了解目前开放的各个语音识别API的功能、性能、使用特性，设计了语音识别实验的内容。
+
+\section{开放平台调查}
+
+经过上网调查、查阅官方首先和说明文档，总结目前互联网市场上有如下开放的语音识别API：
+
+\begin{table}[htbp]
+\centering
+\caption{开放语音识别API调查结果}
+\label{tab:ParametersForPandR}
+\begin{tabular}{ccccc}
+\toprule[1.5pt]
+{} & {\heiti 语音支持} & {\heiti 在线} & {\heiti 收费} & {\heiti 其他}\\\midrule[1pt]
+百度云语音 & 中英 & \tabincell{c}{在线和离线\\都支持} & 免费 & \tabincell{c}{继承录音功能、语义理解\\上线后会有次数限制}\\
+科大讯飞 & 中英 & 在线 & \tabincell{c}{含免费\\部分} & \tabincell{c}{有语义解析功能、降噪\\大量使用后会有次数限制}\\
+\tabincell{c}{Google\\语音识别} & 中英 & 在线 & 免费 & \tabincell{c}{非针对移动应用\\必须FLAC格式文件}\\
+搜狗语音云 & 中文 & 在线 & 免费 & \tabincell{c}{服务次数上限：1000/一天\\集成录音\\降噪网络通讯和状态通知}\\
+微信语音平台 & 中英 & 在线 & 收费 & -\\
+云知声语音云 & 中文 & 在线 & 收费 & -\\
+语意果 & 中文 & 在线 & 收费 & -\\
+\bottomrule[1.5pt]
+\end{tabular}
+\end{table}
+
+\section{实验设计和说明}
+
+考虑到设计系统需要英文语音识别、但也需要在未来开发中文系统，根据该需求和上一小节的调研结果，一共选择了三个备选公共平台API做测试（百度云、科大讯飞、Google语音识别）。由于提供的接口不同，Google语音识别API测试的方法为合成录音文件为FLAC格式后传输后得到结果，其余API（百度云和科大讯飞）测试为电脑播放录音，手机端得到测试结果。
+
+针对《脑健康系统研究》中的语音题，设计测试录音如下：
+
+\begin{itemize}
+\item 录音A：中文单词测试：金属，哭泣，黑暗，北方，学校，玫瑰，向上，英尺，苹果，钢笔；
+\item	录音B：中文连续测试：草原上有对狮子母子，小狮子问母狮子：“妈妈，幸福在哪里？”母狮子说：“幸福就在你的尾巴上呀”于是小狮子不断追着尾巴跑，但始终咬不到。母狮子笑道：“傻瓜！幸福不是这样得到的。只要你昂首向前走，幸福就会一直跟着你。”\footnote{该小故事转自百度}；
+\item 录音C：英文单词测试，metal,cry,dark,south,school,rose,up,inch,apple,pen（原问卷中原题）；
+\item 录音D：英文连续测试：Anna, of South Boston, employed as a scrub woman in an office building, reported at the City Hall Station that she had been held up, on State Street, the night before, and robbed of fifteen dollars. She had four little children, the rent was due, and they had not eaten for two days. The officers, touched by the woman’s story, made up a purse for her.（原问卷中原题）；
+\item 每个录音会播放三遍：第一遍为遍正常音量、第二遍为遍音量较小、第三遍为人工增加噪声的正常音量；
+\item 录音由本人录制，在英语上可能有一些词语发音不标准导致结果有偏差。
+\end{itemize}
+
+\section{实验结果}
+
+\begin{table}[htbp]
+\centering
+\caption{开放语音识别API调查结果}
+\label{tab:ParametersForPandR}
+\begin{tabular}{ccccc}
+\toprule[1.5pt]
+{} & {\heiti 中文单词} & {\heiti 中文连续} & {\heiti 英文单词} & {\heiti 英文连续}\\\midrule[1pt]
+百度云语音 & \tabincell{c}{正常音量和加噪\\下非常顺利通过\\测试\\小音量下错误率\\比较高 5/10} & \tabincell{c}{正常音量加噪下\\错了一句话\\大体识别正确\\小音量下几乎不\\能用} & \tabincell{c}{正常音量：识别\\对了7/10\\噪音：5/10\\小音量：3/10} &  \tabincell{c}{正常音量情况下\\文字大体长得差\\不多（语法基本\\能识别正确），关\\键词有错误情况\\噪声情况下略差\\小音量几乎不能用}\\
+科大讯飞 & \tabincell{c}{正常音量下顺利\\通过测试\\噪声环境下有一\\个词语错误\\小音量下错误率\\较高 5/10} & \tabincell{c}{正常音量和加噪\\情况下顺利通过\\测试小音量下错误率\\很高} & \tabincell{c}{正常音量：8/10\\噪音：7/10\\小音量：3/10\\} &  \tabincell{c}{和百度云的情况\\相近}\\
+Google语音识别 & \tabincell{c}{正常10/10\\噪声9/10\\因为是文件传\\输，小音量没有\\很大影响8/10} & \tabincell{c}{加噪情况下错了\\2句话\\小音量下错了1句}  & \tabincell{c}{10/10\\小音量：8/10}  & \tabincell{c}{语法基本正确\\关键词基本上都\\差不多}\\
+\bottomrule[1.5pt]
+\end{tabular}
+\end{table}
+
+实验结果可见表4.2。通过对实验结果的分析，可以得出一下这些结论：
+
+\begin{itemize}
+\item 百度的sdk中有一些模版的接口，比较适用于android开发；
+\item	在中文处理上，百度和讯飞做得还算不错，正确率能达到90%以上。Google的稍逊；
+\item 但是在英语处理上，百度和讯飞在语法的识别上还是可以，但是在关键词的识别上稍微差一些；
+\item 小音量的情况下，百度和讯飞处理都非常不好；
+\item 总体来说，百度和讯飞在测试结果上没有明显的差异。
+\end{itemize}
+
+\section{实验结论}
+
+\begin{itemize}
+\item 有三个比较合适（免费、支持中英文）备选API：百度、讯飞、google语音识别；
+\item	中文处理上百度云和科大讯飞功能强于google语音识别，加噪的条件下准确率90%以上；
+\item 英文处理上，百度云和科大讯飞对语法的识别还算可用，但有关键词识别错误（可能测试的发音有问题）；
+\item 小音量下API的性能很差完全不能使用；
+\item Google语音的API非针对移动端，考虑到接到Android开发上可能会非常不方便，百度云和科大讯飞的总体上来说性能接近。由于百度云的应用接口更容易使用，选择使用百度云的语音识别SDK
+\end{itemize}
